@@ -2,8 +2,7 @@ name: serverless-dev
 
 on:
   push:
-    branches:
-      - dev
+    branches: dev
   repository_dispatch:
     types: trigger-my-workflow
 
@@ -13,5 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Print AWS Credentials
-        run: |
-          echo "Trigger serveless Repo"
+        run: echo "Trigger serveless Repo"
