@@ -1,9 +1,11 @@
-name: backend-lambda-deploy-dev
+name: serverless-dev
 
 on:
   push:
     branches:
       - dev
+  repository_dispatch:
+    types: trigger-my-workflow
 
 jobs:
   build:
