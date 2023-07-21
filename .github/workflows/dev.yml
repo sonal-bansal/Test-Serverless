@@ -1,0 +1,14 @@
+name: backend-lambda-deploy-dev
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print AWS Credentials
+        run: |
+          echo "Trigger serveless Repo"
