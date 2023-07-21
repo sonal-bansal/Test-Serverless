@@ -2,9 +2,11 @@ name: serverless-dev
 
 on:
   push:
-    branches: dev
+    branches:
+      - dev
   repository_dispatch:
     types: trigger-my-workflow
+  workflow_dispatch:  # Add this event definition to enable manual triggering
 
 jobs:
   build:
@@ -12,4 +14,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Print AWS Credentials
-        run: echo "Trigger serveless Repo"
+        run: echo "Trigger serverless Repo"
