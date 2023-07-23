@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - dev
+    paths:
+      - folder1/**
   repository_dispatch:
     types: trigger-my-workflow
   workflow_dispatch:  # Add this event definition to enable manual triggering
