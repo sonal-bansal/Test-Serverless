@@ -5,7 +5,7 @@ on:
     branches:
       - dev
     paths:
-      - folder1/**
+      - .github/workflows/test.yml
   
 jobs:
   build:
@@ -13,4 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Print AWS Credentials
-        run: echo "Trigger serverless Repo"
+        run: |
+          echo "Trigger serverless Repo"
+          echo "BRANCH : ${{ github.ref_name }}"
+        
