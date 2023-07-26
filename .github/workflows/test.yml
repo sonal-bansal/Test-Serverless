@@ -13,8 +13,11 @@ jobs:
     environment: ${{ github.ref_name }}
     steps:
       - name: Print AWS Credentials
+        env:
+          AWS_KEY : ${{secrets.AWS_KEY}}
         run: |
           echo "Trigger serverless Repo"
           echo "BRANCH : ${{ github.ref_name }}"
           echo "AWS KEY : ${{ secrets.AWS_KEY }}"
+          echo "AWS KEY 2 : $AWS_KEY"
         
