@@ -17,5 +17,5 @@ jobs:
           echo "Trigger serverless Repo"
           echo "BRANCH : ${{ github.ref_name }}"
           echo "AWS KEY : ${{ secrets.AWS_KEY }}"
-          echo "AWS KEY 2 : ${{ vars.AWS_KEY2}}"
+          echo "AWS KEY 2 : ${{ vars.AWS_KEY2 }}"
         
