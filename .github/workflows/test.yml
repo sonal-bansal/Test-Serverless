@@ -18,4 +18,5 @@ jobs:
           echo "BRANCH : ${{ github.ref_name }}"
           echo "AWS KEY : ${{ secrets.AWS_KEY }}"
           echo "AWS KEY 2 : ${{ vars.AWS_KEY2 }}"
+          echo "SONAL : ${{ vars.SONAL }}"
         
